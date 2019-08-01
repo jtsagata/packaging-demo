@@ -3,12 +3,50 @@ Section: shells
 Priority: optional
 Maintainer: John Doe <john@doe.com>
 Build-Depends: build-essential, debhelper (>= 9)
+Standards-Version: 4.3.0
+Homepage: https://salsa.debian.org/debian/debmake-doc
 
-Package: hello
-Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: John's hello package
- John's package is written in Python
- and prints a greeting.
+Package: debhello
+Architecture: any
+Multi-Arch: foreign
+Depends: libsharedlib1 (= ${binary:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: example executable package
+ This is an example package to demonstrate Debian packaging using
+ the debmake command.
  .
- It is awesome.
+ The generated Debian package uses the dh command offered by the
+ debhelper package and the dpkg source format `3.0 (quilt)'.
+ .
+ This package provides the executable program.
+
+
+Package: libsharedlib1
+Section: libs
+Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: example shared library package
+ This is an example package to demonstrate Debian packaging using
+ the debmake command.
+ .
+ The generated Debian package uses the dh command offered by the
+ debhelper package and the dpkg source format `3.0 (quilt)'.
+ .
+ This package contains the shared library.
+
+Package: libsharedlib-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: libsharedlib1 (= ${binary:Version}), ${misc:Depends}
+Description: example development package
+ This is an example package to demonstrate Debian packaging using
+ the debmake command.
+ .
+ The generated Debian package uses the dh command offered by the
+ debhelper package and the dpkg source format `3.0 (quilt)'.
+ .
+ This package contains the development files.
