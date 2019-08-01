@@ -1,0 +1,14 @@
+Source: hello
+Section: shells
+Priority: optional
+Maintainer: John Doe <john@doe.com>
+Build-Depends: build-essential, debhelper (>= 9)
+
+Package: hello
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: John's hello package
+ John's package is written in Python
+ and prints a greeting.
+ .
+ It is awesome.
