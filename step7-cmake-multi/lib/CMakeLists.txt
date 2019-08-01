@@ -1,1 +1,5 @@
-add_library(sharedlib sharedlib.c sharedlib.h)
+add_library(sharedlib SHARED sharedlib.c sharedlib.h)
+
+install(TARGETS hello
+  RUNTIME DESTINATION lib
+)

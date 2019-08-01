@@ -11,3 +11,4 @@ TODO:
 * flatpack and snap
 * Better CMake intergration
 * Clean debian dir after build and move files to directory
+* Changelog management
