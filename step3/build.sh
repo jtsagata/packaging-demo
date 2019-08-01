@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-dpkg-buildpackage -b
+env DH_VERBOSE=1 dpkg-buildpackage -b
