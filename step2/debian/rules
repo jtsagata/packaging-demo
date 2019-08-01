@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+
+clean:
+	@# Do nothing
+
+build:
+	@# Do nothing
+
+binary:
+	mkdir -p debian/hello
+	mkdir -p debian/hello/usr/bin
+	cp hello debian/hello/usr/bin/
+	dh_gencontrol
+	dh_builddeb

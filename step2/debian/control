@@ -1,0 +1,19 @@
+Source: hello
+Section: shells
+Priority: optional
+Maintainer: John Doe <john@doe.com>
+Build-Depends: debhelper (>= 9)
+
+## Possible values for sections
+##   admin, cli-mono, comm, database, debug, devel, doc, editors, education, electronics, embedded, fonts, games, gnome, gnu-r, gnustep, graphics, hamradio,
+##   haskell, httpd, interpreters, introspection, java, javascript, kde, kernel, libdevel, libs, lisp, localization, mail, math, metapackages, misc, net, news,
+##   ocaml, oldlibs, otherosfs, perl, php, python, ruby, rust, science, shells, sound, tasks, tex, text, utils, vcs, video, web, x11, xfce, zope.
+
+Package: hello
+Architecture: all
+Depends: python
+Description: John's hello package
+ John's package is written in Python
+ and prints a greeting.
+ .
+ It is awesome.
