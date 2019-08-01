@@ -1,10 +1,4 @@
 #!/usr/bin/make -f
 
-clean:
-	dh clean
-
-build:
-	dh build
-
-binary:
-	dh binary
+%:
+	dh $@
